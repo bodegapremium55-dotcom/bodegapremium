@@ -200,6 +200,7 @@ function App() {
               onClick={() => setSelectedProduct(product)}
             >
               <div className="product-image-container">
+                {product.badge && <span className="product-badge">{product.badge}</span>}
                 <img src={product.imageUrl} alt={product.name} className="product-image" loading="lazy" />
               </div>
               <div className="product-info">
@@ -208,7 +209,12 @@ function App() {
                 <p className="product-desc">{product.description}</p>
                 <div className="product-footer">
                   <div style={{ display: 'flex', flexDirection: 'column' }}>
-                    <span className="product-price">{product.formattedPrice}</span>
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+                      <span className="product-price">{product.formattedPrice}</span>
+                      {product.formattedOriginalPrice && (
+                        <span className="product-original-price">{product.formattedOriginalPrice}</span>
+                      )}
+                    </div>
                     <span style={{ fontSize: '0.75rem', color: 'var(--text-secondary)' }}>{product.format}</span>
                   </div>
                   <button 
@@ -371,8 +377,11 @@ function App() {
             <div className="product-modal-details">
               <span className="product-modal-category">{selectedProduct.category}</span>
               <h2 className="product-modal-title">{selectedProduct.name}</h2>
-              <div style={{ display: 'flex', alignItems: 'baseline', gap: '0.75rem', marginBottom: '1.25rem' }}>
+              <div style={{ display: 'flex', flexWrap: 'wrap', alignItems: 'baseline', gap: '0.75rem', marginBottom: '1.25rem' }}>
                 <div className="product-modal-price" style={{ marginBottom: 0 }}>{selectedProduct.formattedPrice}</div>
+                {selectedProduct.formattedOriginalPrice && (
+                  <span className="product-modal-original-price">{selectedProduct.formattedOriginalPrice}</span>
+                )}
                 <span style={{ color: 'var(--text-secondary)', fontSize: '0.9rem' }}>({selectedProduct.format})</span>
               </div>
               

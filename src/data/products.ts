@@ -12,6 +12,9 @@ export interface Product {
   winery?: string;
   origin_region?: string;
   format?: string;
+  badge?: string;
+  originalPrice?: number;
+  formattedOriginalPrice?: string;
 }
 
 export const products: Product[] = [
@@ -478,7 +481,10 @@ export const products: Product[] = [
     vintage: 2023,
     winery: "Bodega Premium",
     origin_region: "Maule",
-    format: "Caja de 6 botellas"
+    format: "Caja de 6 botellas",
+    badge: "OFERTA",
+    originalPrice: 29900,
+    formattedOriginalPrice: "$29.900"
   },
   {
     id: "11111111-1111-1111-1111-000000000032",
@@ -493,7 +499,10 @@ export const products: Product[] = [
     vintage: 2023,
     winery: "Bodega Premium",
     origin_region: "Maule",
-    format: "Caja de 6 botellas"
+    format: "Caja de 6 botellas",
+    badge: "OFERTA",
+    originalPrice: 29900,
+    formattedOriginalPrice: "$29.900"
   },
   {
     id: "11111111-1111-1111-1111-000000000033",
@@ -508,7 +517,10 @@ export const products: Product[] = [
     vintage: 2024,
     winery: "Bodega Premium",
     origin_region: "Maule",
-    format: "Caja de 6 botellas"
+    format: "Caja de 6 botellas",
+    badge: "OFERTA",
+    originalPrice: 29900,
+    formattedOriginalPrice: "$29.900"
   },
   {
     id: "11111111-1111-1111-1111-000000000034",

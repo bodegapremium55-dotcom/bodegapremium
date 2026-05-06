@@ -271,6 +271,21 @@ p {
   position: relative;
 }
 
+.product-badge {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background-color: #ffd700; /* Gold for value/offer */
+  color: #000;
+  padding: 0.25rem 0.75rem;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  font-weight: 800;
+  z-index: 2;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  text-transform: uppercase;
+}
+
 .product-image {
   max-width: 100%;
   max-height: 100%;
@@ -853,4 +868,18 @@ p {
     justify-content: flex-start;
     padding: 1rem;
   }
+}
+
+.product-original-price {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  text-decoration: line-through;
+  opacity: 0.7;
+}
+
+.product-modal-original-price {
+  font-size: 1.1rem;
+  color: var(--text-secondary);
+  text-decoration: line-through;
+  opacity: 0.7;
 }
