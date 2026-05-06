@@ -509,5 +509,35 @@ export const products: Product[] = [
     winery: "Bodega Premium",
     origin_region: "Maule",
     format: "Caja de 6 botellas"
+  },
+  {
+    id: "11111111-1111-1111-1111-000000000034",
+    name: "Cabernet Sauvignon Saldo Exportación",
+    price: 35000,
+    formattedPrice: "$35.000",
+    imageUrl: "/images/generic/cabernet-saldo.png",
+    description: "Vino de calidad superior destinado originalmente a mercados internacionales. Una oportunidad única de adquirir un producto premium a precio preferencial.",
+    category: "Saldo Exportación",
+    tasting_notes: "Estructura firme con notas de frutos negros y chocolate.",
+    alcohol_percentage: "14.0",
+    vintage: 2022,
+    winery: "Bodega Premium",
+    origin_region: "Maule",
+    format: "Caja de 6 botellas"
+  },
+  {
+    id: "11111111-1111-1111-1111-000000000035",
+    name: "Carmenere Saldo Exportación",
+    price: 35000,
+    formattedPrice: "$35.000",
+    imageUrl: "/images/generic/carmenere-saldo.png",
+    description: "Excedente de exportación de alta gama. Notas especiadas y taninos aterciopelados.",
+    category: "Saldo Exportación",
+    tasting_notes: "Pimienta negra, ciruelas pasas y un final elegante.",
+    alcohol_percentage: "13.5",
+    vintage: 2022,
+    winery: "Bodega Premium",
+    origin_region: "Maule",
+    format: "Caja de 6 botellas"
   }
 ];

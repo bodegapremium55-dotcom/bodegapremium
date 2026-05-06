@@ -27,6 +27,13 @@ function App() {
   const [isCheckingOut, setIsCheckingOut] = useState(false);
   const [user, setUser] = useState<UserData | null>(null);
   const [guestEmail, setGuestEmail] = useState('');
+  const [selectedCategory, setSelectedCategory] = useState<string>('Todos');
+
+  const categories = ['Todos', 'Varietal', 'Reserva', 'Gran Reserva', 'Premium', 'Saldo Exportación'];
+
+  const filteredProducts = selectedCategory === 'Todos' 
+    ? products 
+    : products.filter(p => p.category === selectedCategory);
 
   const cartTotalItems = cartItems.reduce((total, item) => total + item.quantity, 0);
   const cartTotalPrice = cartItems.reduce((total, item) => total + (item.price * item.quantity), 0);
@@ -164,11 +171,28 @@ function App() {
         </div>
       </section>
 
+      {/* Category Navigation */}
+      <nav className="category-nav">
+        <div className="container category-tabs">
+          {categories.map(cat => (
+            <button 
+              key={cat}
+              className={`category-tab ${selectedCategory === cat ? 'active' : ''}`}
+              onClick={() => setSelectedCategory(cat)}
+            >
+              {cat}
+            </button>
+          ))}
+        </div>
+      </nav>
+
       {/* Product List */}
       <main id="catalog" className="products-section container">
-        <h2 className="section-title">Nuestra Selección</h2>
+        <h2 className="section-title">
+          {selectedCategory === 'Todos' ? 'Nuestra Selección' : selectedCategory}
+        </h2>
         <div className="grid">
-          {products.map((product, index) => (
+          {filteredProducts.map((product, index) => (
             <div 
               key={product.id} 
               className="product-card animate-fade-in cursor-pointer"
