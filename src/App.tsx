@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { ShoppingCart, X, Plus, Minus, Wine, ChevronRight, CheckCircle2, LogOut, BookOpen } from 'lucide-react';
+import { ShoppingCart, X, Plus, Minus, Wine, ChevronRight, ChevronLeft, CheckCircle2, LogOut, BookOpen, Star } from 'lucide-react';
 import { products, type Product } from './data/products';
 import { blogPosts, type BlogPost } from './data/blog';
 import { initMercadoPago, Wallet } from '@mercadopago/sdk-react';
@@ -18,7 +18,58 @@ interface UserData {
   picture?: string;
 }
 
+import { useEffect } from 'react';
+
 function App() {
+  const [currentSlide, setCurrentSlide] = useState(0);
+  const slides = [
+    {
+      title: "MEGA OFERTA: Línea Varietal",
+      subtitle: "Calidad Premium para cada día",
+      desc: "Llévate 6 botellas de Cabernet, Merlot, Carmenere o Sauvignon Blanc por sólo $23.900. ¡Ahorra $6.000 por caja!",
+      image: "/images/hero-varietal.png",
+      buttonText: "Ver Varietales en Oferta",
+      categoryId: "Varietal",
+      badge: "OFERTA LIMITADA"
+    },
+    {
+      title: "Línea Reserva de Selección",
+      subtitle: "Elegancia y Tradición del Maule",
+      desc: "12 meses de crianza en barrica para una complejidad perfecta. Descubre por qué son los favoritos de nuestros clientes.",
+      image: "/images/hero-reserva.png",
+      buttonText: "Explorar Reservas",
+      categoryId: "Reserva",
+      badge: "SELECCIÓN PREMIUM"
+    },
+    {
+      title: "Saldos de Exportación",
+      subtitle: "Lo Mejor del Mercado Internacional",
+      desc: "Accede a partidas exclusivas destinadas al extranjero a precio de bodega. Calidad de exportación garantizada.",
+      image: "https://images.unsplash.com/photo-1506377247377-2a5b3b0ca3ef?auto=format&fit=crop&q=80&w=2000",
+      buttonText: "Ver Ofertas de Exportación",
+      categoryId: "Saldo Exportación",
+      badge: "STOCK LIMITADO"
+    },
+    {
+      title: "Explora Todo el Catálogo",
+      subtitle: "Directo de Bodega a tu Mesa",
+      desc: "Desde varietales frescos hasta Gran Reservas premiados. La mejor selección del Valle del Maule en un solo lugar.",
+      image: "https://images.unsplash.com/photo-1510850431481-7a2ba518b5c2?auto=format&fit=crop&q=80&w=2000",
+      buttonText: "Ver Todo el Catálogo",
+      categoryId: "Todos"
+    }
+  ];
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentSlide(prev => (prev + 1) % slides.length);
+    }, 6000);
+    return () => clearInterval(timer);
+  }, [slides.length]);
+
+  const nextSlide = () => setCurrentSlide(prev => (prev + 1) % slides.length);
+  const prevSlide = () => setCurrentSlide(prev => (prev - 1 + slides.length) % slides.length);
+
   const [cartItems, setCartItems] = useState<CartItem[]>([]);
   const [isCartOpen, setIsCartOpen] = useState(false);
   const [selectedProduct, setSelectedProduct] = useState<Product | null>(null);
@@ -150,24 +201,49 @@ function App() {
         </div>
       </header>
 
-      {/* Hero Section */}
-      <section className="hero">
-        <div className="container">
-          <h1 className="animate-fade-in" style={{ animationDelay: '0.1s' }}>
-            Exclusividad y Tradición <br />
-            <span style={{ color: 'var(--primary-color)' }}>en Cada Copa</span>
-          </h1>
-          <p className="animate-fade-in" style={{ animationDelay: '0.2s' }}>
-            Descubre nuestra selección premium directamente desde el Valle del Maule. 
-            Calidad excepcional, aromas únicos y una experiencia inolvidable.
-          </p>
-          <div className="animate-fade-in" style={{ animationDelay: '0.3s' }}>
-            <button className="btn btn-primary" onClick={() => {
-              document.getElementById('catalog')?.scrollIntoView({ behavior: 'smooth' });
-            }}>
-              Ver Catálogo <ChevronRight size={20} />
-            </button>
+      {/* Hero Slider */}
+      <section className="hero-slider">
+        {slides.map((slide, index) => (
+          <div 
+            key={index}
+            className={`slide ${index === currentSlide ? 'active' : ''}`}
+            style={{ backgroundImage: `linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url(${slide.image})` }}
+          >
+            <div className="container slide-content">
+              {slide.badge && <span className="slide-badge animate-fade-in">{slide.badge}</span>}
+              <h2 className="slide-subtitle animate-fade-in">{slide.subtitle}</h2>
+              <h1 className="animate-fade-in">
+                {slide.title}
+              </h1>
+              <p className="animate-fade-in">
+                {slide.desc}
+              </p>
+              <div className="animate-fade-in action-buttons">
+                <button 
+                  className="btn btn-primary" 
+                  onClick={() => {
+                    setSelectedCategory(slide.categoryId);
+                    document.getElementById('catalog')?.scrollIntoView({ behavior: 'smooth' });
+                  }}
+                >
+                  {slide.buttonText} <ChevronRight size={20} />
+                </button>
+              </div>
+            </div>
           </div>
+        ))}
+        
+        <button className="slider-nav prev" onClick={prevSlide}><ChevronLeft size={32} /></button>
+        <button className="slider-nav next" onClick={nextSlide}><ChevronRight size={32} /></button>
+        
+        <div className="slider-dots">
+          {slides.map((_, index) => (
+            <button 
+              key={index} 
+              className={`dot ${index === currentSlide ? 'active' : ''}`}
+              onClick={() => setCurrentSlide(index)}
+            />
+          ))}
         </div>
       </section>
 
@@ -181,6 +257,9 @@ function App() {
               onClick={() => setSelectedCategory(cat)}
             >
               {cat}
+              {(cat === 'Varietal' || cat === 'Saldo Exportación') && (
+                <span style={{ marginLeft: '0.5rem', fontSize: '0.65rem', background: 'white', color: 'var(--primary-color)', padding: '0.1rem 0.4rem', borderRadius: '4px', fontWeight: 900 }}>SALE</span>
+              )}
             </button>
           ))}
         </div>
@@ -201,6 +280,11 @@ function App() {
             >
               <div className="product-image-container">
                 {product.badge && <span className="product-badge">{product.badge}</span>}
+                {product.originalPrice && product.price && (
+                  <span className="discount-tag animate-fade-in">
+                    AHORRA ${new Intl.NumberFormat('es-CL').format(product.originalPrice - product.price)}
+                  </span>
+                )}
                 <img src={product.imageUrl} alt={product.name} className="product-image" loading="lazy" />
               </div>
               <div className="product-info">

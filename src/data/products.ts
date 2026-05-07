@@ -31,7 +31,8 @@ export const products: Product[] = [
     vintage: 2022,
     winery: "Berry Nice",
     origin_region: "Maule",
-    format: "Caja de 6 botellas"
+    format: "Caja de 6 botellas",
+    badge: "EXCLUSIVO"
   },
   {
     id: "11111111-1111-1111-1111-000000000002",
@@ -46,7 +47,8 @@ export const products: Product[] = [
     vintage: 2022,
     winery: "Place Matters",
     origin_region: "Maule",
-    format: "Caja de 6 botellas"
+    format: "Caja de 6 botellas",
+    badge: "ICONO"
   },
   {
     id: "11111111-1111-1111-1111-000000000003",
@@ -61,7 +63,8 @@ export const products: Product[] = [
     vintage: 2022,
     winery: "Place Matters",
     origin_region: "Maule",
-    format: "Caja de 6 botellas"
+    format: "Caja de 6 botellas",
+    badge: "ICONO"
   },
   {
     id: "11111111-1111-1111-1111-000000000004",
@@ -76,7 +79,8 @@ export const products: Product[] = [
     vintage: 2022,
     winery: "Bodega Premium",
     origin_region: "Maule",
-    format: "Caja de 6 botellas"
+    format: "Caja de 6 botellas",
+    badge: "GRAN RESERVA"
   },
   {
     id: "11111111-1111-1111-1111-000000000005",
@@ -91,7 +95,8 @@ export const products: Product[] = [
     vintage: 2022,
     winery: "Luma",
     origin_region: "Maule",
-    format: "Caja de 6 botellas"
+    format: "Caja de 6 botellas",
+    badge: "GRAN RESERVA"
   },
   {
     id: "11111111-1111-1111-1111-000000000006",
@@ -106,7 +111,8 @@ export const products: Product[] = [
     vintage: 2022,
     winery: "Luma",
     origin_region: "Maule",
-    format: "Caja de 6 botellas"
+    format: "Caja de 6 botellas",
+    badge: "GRAN RESERVA"
   },
   {
     id: "11111111-1111-1111-1111-000000000007",
@@ -121,7 +127,8 @@ export const products: Product[] = [
     vintage: 2022,
     winery: "Luma",
     origin_region: "Maule",
-    format: "Caja de 6 botellas"
+    format: "Caja de 6 botellas",
+    badge: "GRAN RESERVA"
   },
   {
     id: "11111111-1111-1111-1111-000000000008",
@@ -136,7 +143,8 @@ export const products: Product[] = [
     vintage: 2022,
     winery: "Luma",
     origin_region: "Maule",
-    format: "Caja de 6 botellas"
+    format: "Caja de 6 botellas",
+    badge: "GRAN RESERVA"
   },
   {
     id: "11111111-1111-1111-1111-000000000009",
@@ -151,7 +159,8 @@ export const products: Product[] = [
     vintage: 2022,
     winery: "Luma",
     origin_region: "Maule",
-    format: "Caja de 6 botellas"
+    format: "Caja de 6 botellas",
+    badge: "GRAN RESERVA"
   },
   {
     id: "11111111-1111-1111-1111-000000000010",
@@ -166,7 +175,8 @@ export const products: Product[] = [
     vintage: 2020,
     winery: "Ojos Verdes",
     origin_region: "Maule",
-    format: "Caja de 6 botellas"
+    format: "Caja de 6 botellas",
+    badge: "ICONO"
   },
   {
     id: "11111111-1111-1111-1111-000000000011",
@@ -181,7 +191,8 @@ export const products: Product[] = [
     vintage: 2022,
     winery: "Por Fin",
     origin_region: "Maule",
-    format: "Caja de 6 botellas"
+    format: "Caja de 6 botellas",
+    badge: "PREMIUM"
   },
   {
     id: "11111111-1111-1111-1111-000000000012",
@@ -196,7 +207,8 @@ export const products: Product[] = [
     vintage: 2022,
     winery: "Bodega Premium",
     origin_region: "Maule",
-    format: "Caja de 6 botellas"
+    format: "Caja de 6 botellas",
+    badge: "GRAN RESERVA"
   },
   {
     id: "11111111-1111-1111-1111-000000000013",
@@ -211,7 +223,8 @@ export const products: Product[] = [
     vintage: 2020,
     winery: "Place Matters",
     origin_region: "Maule",
-    format: "Caja de 6 botellas"
+    format: "Caja de 6 botellas",
+    badge: "ICONO"
   },
   {
     id: "11111111-1111-1111-1111-000000000014",
@@ -226,7 +239,8 @@ export const products: Product[] = [
     vintage: 2022,
     winery: "Sierra Batuco",
     origin_region: "Maule",
-    format: "Caja de 6 botellas"
+    format: "Caja de 6 botellas",
+    badge: "RESERVA"
   },
   {
     id: "11111111-1111-1111-1111-000000000015",
@@ -241,7 +255,8 @@ export const products: Product[] = [
     vintage: 2022,
     winery: "Tricky Rabbit",
     origin_region: "Maule",
-    format: "Caja de 6 botellas"
+    format: "Caja de 6 botellas",
+    badge: "RESERVA"
   },
   {
     id: "11111111-1111-1111-1111-000000000016",
@@ -256,7 +271,8 @@ export const products: Product[] = [
     vintage: 2022,
     winery: "Tricky Rabbit",
     origin_region: "Maule",
-    format: "Caja de 6 botellas"
+    format: "Caja de 6 botellas",
+    badge: "RESERVA"
   },
   {
     id: "11111111-1111-1111-1111-000000000017",
@@ -271,7 +287,8 @@ export const products: Product[] = [
     vintage: 2022,
     winery: "Tricky Rabbit",
     origin_region: "Maule",
-    format: "Caja de 6 botellas"
+    format: "Caja de 6 botellas",
+    badge: "RESERVA"
   },
   {
     id: "11111111-1111-1111-1111-000000000018",
@@ -286,7 +303,8 @@ export const products: Product[] = [
     vintage: 2022,
     winery: "Tricky Rabbit",
     origin_region: "Maule",
-    format: "Caja de 6 botellas"
+    format: "Caja de 6 botellas",
+    badge: "RESERVA"
   },
   {
     id: "11111111-1111-1111-1111-000000000019",
@@ -301,7 +319,8 @@ export const products: Product[] = [
     vintage: 2022,
     winery: "Tricky Rabbit",
     origin_region: "Maule",
-    format: "Caja de 6 botellas"
+    format: "Caja de 6 botellas",
+    badge: "RESERVA"
   },
   {
     id: "11111111-1111-1111-1111-000000000020",
@@ -316,7 +335,8 @@ export const products: Product[] = [
     vintage: 2022,
     winery: "Tricky Rabbit",
     origin_region: "Maule",
-    format: "Caja de 6 botellas"
+    format: "Caja de 6 botellas",
+    badge: "RESERVA"
   },
   {
     id: "11111111-1111-1111-1111-000000000021",
@@ -331,7 +351,8 @@ export const products: Product[] = [
     vintage: 2022,
     winery: "Tricky Rabbit",
     origin_region: "Maule",
-    format: "Caja de 6 botellas"
+    format: "Caja de 6 botellas",
+    badge: "RESERVA"
   },
   {
     id: "11111111-1111-1111-1111-000000000023",
@@ -346,7 +367,8 @@ export const products: Product[] = [
     vintage: null,
     winery: "Sierra Batuco",
     origin_region: "Maule",
-    format: "Caja de 6 botellas"
+    format: "Caja de 6 botellas",
+    badge: "RESERVA"
   },
   {
     id: "11111111-1111-1111-1111-000000000024",
@@ -361,7 +383,8 @@ export const products: Product[] = [
     vintage: null,
     winery: "Sierra Batuco",
     origin_region: "Maule",
-    format: "Caja de 6 botellas"
+    format: "Caja de 6 botellas",
+    badge: "RESERVA"
   },
   {
     id: "11111111-1111-1111-1111-000000000025",
@@ -376,7 +399,8 @@ export const products: Product[] = [
     vintage: null,
     winery: "Sierra Batuco",
     origin_region: "Maule",
-    format: "Caja de 6 botellas"
+    format: "Caja de 6 botellas",
+    badge: "PREMIUM"
   },
   {
     id: "11111111-1111-1111-1111-000000000026",
@@ -391,7 +415,8 @@ export const products: Product[] = [
     vintage: null,
     winery: "Sierra Batuco",
     origin_region: "Maule",
-    format: "Caja de 6 botellas"
+    format: "Caja de 6 botellas",
+    badge: "RESERVA"
   },
   {
     id: "11111111-1111-1111-1111-000000000027",
@@ -406,7 +431,8 @@ export const products: Product[] = [
     vintage: null,
     winery: "Sierra Batuco",
     origin_region: "Maule",
-    format: "Caja de 6 botellas"
+    format: "Caja de 6 botellas",
+    badge: "RESERVA"
   },
   {
     id: "11111111-1111-1111-1111-000000000028",
@@ -421,7 +447,8 @@ export const products: Product[] = [
     vintage: null,
     winery: "Sierra Batuco",
     origin_region: "Maule",
-    format: "Caja de 6 botellas"
+    format: "Caja de 6 botellas",
+    badge: "RESERVA"
   },
   {
     id: "11111111-1111-1111-1111-000000000029",
@@ -436,7 +463,8 @@ export const products: Product[] = [
     vintage: null,
     winery: "Sierra Batuco",
     origin_region: "Maule",
-    format: "Caja de 6 botellas"
+    format: "Caja de 6 botellas",
+    badge: "RESERVA"
   },
   {
     id: "11111111-1111-1111-1111-000000000030",
@@ -451,7 +479,8 @@ export const products: Product[] = [
     vintage: null,
     winery: "Por Fin",
     origin_region: "Maule",
-    format: "Botella individual"
+    format: "Botella individual",
+    badge: "PREMIUM"
   },
   {
     id: "11111111-1111-1111-1111-000000000022",
@@ -466,7 +495,8 @@ export const products: Product[] = [
     vintage: 2022,
     winery: "Tricky Fizz",
     origin_region: "Maule",
-    format: "Caja de 6 botellas"
+    format: "Caja de 6 botellas",
+    badge: "EXCLUSIVO"
   },
   {
     id: "11111111-1111-1111-1111-000000000031",
@@ -523,6 +553,24 @@ export const products: Product[] = [
     formattedOriginalPrice: "$29.900"
   },
   {
+    id: "11111111-1111-1111-1111-000000000036",
+    name: "Varietal Carmenere",
+    price: 23900,
+    formattedPrice: "$23.900",
+    imageUrl: "/images/generic/red-varietal.png",
+    description: "Vino tinto varietal con notas de pimienta y frutos rojos. Clásico chileno para toda ocasión.",
+    category: "Varietal",
+    tasting_notes: "Notas de ciruela y un toque de especias.",
+    alcohol_percentage: "13.5",
+    vintage: 2023,
+    winery: "Bodega Premium",
+    origin_region: "Maule",
+    format: "Caja de 6 botellas",
+    badge: "OFERTA",
+    originalPrice: 29900,
+    formattedOriginalPrice: "$29.900"
+  },
+  {
     id: "11111111-1111-1111-1111-000000000034",
     name: "Cabernet Sauvignon Saldo Exportación",
     price: 35000,
@@ -535,7 +583,10 @@ export const products: Product[] = [
     vintage: 2022,
     winery: "Bodega Premium",
     origin_region: "Maule",
-    format: "Caja de 6 botellas"
+    format: "Caja de 6 botellas",
+    badge: "OFERTA",
+    originalPrice: 42000,
+    formattedOriginalPrice: "$42.000"
   },
   {
     id: "11111111-1111-1111-1111-000000000035",
@@ -550,6 +601,9 @@ export const products: Product[] = [
     vintage: 2022,
     winery: "Bodega Premium",
     origin_region: "Maule",
-    format: "Caja de 6 botellas"
+    format: "Caja de 6 botellas",
+    badge: "OFERTA",
+    originalPrice: 42000,
+    formattedOriginalPrice: "$42.000"
   }
 ];
