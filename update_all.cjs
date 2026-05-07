@@ -87,7 +87,7 @@ export const products: Product[] = [
     let match;
     let count = 0;
     
-    while ((match = articleRegex.exec(wipHtml)) !== null && count < 3) {
+    while ((match = articleRegex.exec(wipHtml)) !== null && count < 9) {
       const content = match[1];
       const titleMatch = content.match(/<h3[^>]*>.*?<a[^>]*>(.*?)<\/a>.*?<\/h3>/);
       const linkMatch = content.match(/<a[^>]*href="(.*?)"/);
@@ -97,7 +97,7 @@ export const products: Product[] = [
       if (titleMatch && linkMatch) {
         posts.push({
           id: `news-${count}`,
-          title: titleMatch[1].trim().replace(/&#[0-9]+;/g, ''),
+          title: titleMatch[1].trim().replace(/&#[0-9]+;/g, '').replace(/&nbsp;/g, ' '),
           excerpt: (excerptMatch ? excerptMatch[1].replace(/<[^>]*>/g, '').trim().substring(0, 150) + '...' : 'Leer más...'),
           imageUrl: (imgMatch ? imgMatch[1] : 'https://images.unsplash.com/photo-1506377247377-2a5b3b417ebb?auto=format&fit=crop&w=800&q=80'),
           link: linkMatch[1],
