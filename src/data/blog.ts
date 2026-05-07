@@ -43,9 +43,9 @@ Este fenómeno se debe a una mayor cultura del vino y a la excelente relación p
     content: `Renzo Cotarella, gerente general de la mítica casa italiana Antinori, visitó Chile para profundizar en la estrategia de Haras de Pirque. La cena, servida a los pies de los Andes, fue un manifiesto sobre la importancia del detalle y el equilibrio entre cocina y vino.
 
 Cotarella destacó que el vino italiano y el chileno de alta gama comparten una resiliencia única ante los mercados globales cambiantes. "Todo se trata de equilibrio", señaló, mientras se degustaban las nuevas añadas de Albis y Pitío.`,
-    imageUrl: "https://www.wip.cl/wp-content/uploads/2026/04/Albis_2022-476x440.jpg",
+    imageUrl: "https://images.unsplash.com/photo-1516594915697-87eb3b1c14ea?auto=format&fit=crop&q=80&w=800",
     date: "04 mayo 2026",
-    author: "WiP.cl",
+    author: "WiP.cl (Info) / Unsplash (Img)",
     link: "https://www.wip.cl/antinori-en-chile-una-cena-muchas-definiciones/"
   },
   {
@@ -67,9 +67,9 @@ Esta eficiencia no solo cuida el recurso hídrico, sino que mejora la calidad de
     content: `El próximo 9 de mayo, Casona Compañía será el epicentro del vino independiente. La Copa Rota vuelve con 18 proyectos vitivinícolas que priorizan el oficio y la cercanía. 
 
 El evento es una oportunidad única para conocer a los productores y descubrir botellas que no llegan a los supermercados tradicionales. Una feria familiar, pet-friendly y llena de cultura local en el corazón de Santiago.`,
-    imageUrl: "https://www.wip.cl/wp-content/uploads/2026/04/CopaRota_mayo2026-e1777580984807-476x440.jpg",
+    imageUrl: "https://images.unsplash.com/photo-1528823872057-9c018a7a7553?auto=format&fit=crop&q=80&w=800",
     date: "02 mayo 2026",
-    author: "WiP.cl",
+    author: "WiP.cl (Info) / Unsplash (Img)",
     link: "https://www.wip.cl/la-copa-rota-regresa-a-barrio-yungay/"
   },
   {
@@ -91,9 +91,9 @@ El evento es una oportunidad única para conocer a los productores y descubrir b
     content: `San Javier celebró su identidad con la Fiesta del Vino Patrimonial. Pequeños productores del secano interior mostraron el potencial de variedades ancestrales que han sobrevivido por siglos sin riego. 
 
 Este evento refuerza la importancia de mantener viva la tradición vitivinícola chilena y el valor de las cepas que cuentan la historia de nuestro territorio.`,
-    imageUrl: "https://www.wip.cl/wp-content/uploads/2026/04/Fiesta-del-Vino-Patrimonial-de-San-Javier-de-Loncomilla-Sernatur-Maule-476x440.jpg",
+    imageUrl: "https://images.unsplash.com/photo-1562601579-599dec564e06?auto=format&fit=crop&q=80&w=800",
     date: "30 abril 2026",
-    author: "WiP.cl",
+    author: "WiP.cl (Info) / Unsplash (Img)",
     link: "https://www.wip.cl/fiesta-del-vino-patrimonial-llega-a-loncomilla/"
   },
   {
