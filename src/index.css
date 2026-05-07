@@ -301,13 +301,41 @@ p {
 
 @media (max-width: 768px) {
   .hero-slider {
-    height: 500px;
+    height: 400px;
   }
   .hero-slider h1 {
-    font-size: 2.5rem;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+  .slide-subtitle {
+    font-size: 1.1rem;
+  }
+  .hero-slider p {
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
   }
   .slider-nav {
     display: none;
+  }
+  .hide-mobile {
+    display: none !important;
+  }
+  .show-mobile {
+    display: block !important;
+  }
+  .mobile-promo-text {
+    background: rgba(211, 47, 47, 0.9);
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    display: inline-block !important;
+    font-weight: 700;
+    margin-top: 0.5rem;
+  }
+}
+
+@media (min-width: 769px) {
+  .show-mobile {
+    display: none !important;
   }
 }
 
