@@ -24,40 +24,43 @@ function App() {
   const [currentSlide, setCurrentSlide] = useState(0);
   const slides = [
     {
-      title: "MEGA OFERTA: Línea Varietal",
-      subtitle: "Calidad Premium",
-      desc: "Lote exclusivo de Cabernet, Merlot, Carmenere y Sauvignon Blanc.",
-      mobileDesc: "6 botellas por sólo $23.900",
-      image: "/images/hero-varietal.png",
-      buttonText: "Ver Oferta",
-      categoryId: "Varietales",
-      badge: "OFERTA"
+      title: "Varietales SALE",
+      subtitle: "Oferta Exclusiva",
+      desc: "Lote seleccionado de Cabernet, Merlot, Carmenere y Sauvignon Blanc.",
+      mobileDesc: "¡6 Botellas por solo $23.900!",
+      image: "/images/hero-varietales-v3.png", // New ultra-clean high-quality image without text
+      buttonText: "Ver Varietales",
+      categoryId: "Varietales SALE",
+      badge: "LIQUIDACIÓN",
+      hideTitleMobile: false,
+      hideBadgeMobile: true
     },
     {
-      title: "Reserva de Selección",
+      title: "Reservas de Selección",
       subtitle: "Elegancia del Maule",
-      desc: "12 meses de barrica para una complejidad perfecta.",
+      desc: "Nuestros mejores Reservas con 12 meses de crianza en barrica.",
       image: "/images/hero-reserva.png",
       buttonText: "Ver Reservas",
       categoryId: "Reservas",
       badge: "PREMIUM"
     },
     {
-      title: "Saldos de Exportación",
-      subtitle: "Mercado Internacional",
-      desc: "Partidas exclusivas a precio de bodega.",
+      title: "Gran Reservas",
+      subtitle: "Edición Limitada",
+      desc: "Vinos de gran cuerpo y complejidad, ideales para guarda.",
       image: "https://images.unsplash.com/photo-1506377247377-2a5b3b0ca3ef?auto=format&fit=crop&q=80&w=2000",
-      buttonText: "Ver Ofertas",
-      categoryId: "Saldo Exportación",
+      buttonText: "Ver Gran Reservas",
+      categoryId: "Gran Reservas",
       badge: "STOCK LIMITADO"
     },
     {
-      title: "Todo el Catálogo",
-      subtitle: "Directo de Bodega",
-      desc: "La mejor selección del Valle del Maule.",
+      title: "Saldos de Exportación",
+      subtitle: "Calidad Internacional",
+      desc: "Partidas exclusivas a precio de bodega directo a tu mesa.",
       image: "https://images.unsplash.com/photo-1510850431481-7a2ba518b5c2?auto=format&fit=crop&q=80&w=2000",
-      buttonText: "Ver Todo",
-      categoryId: "Todos"
+      buttonText: "Ver Ofertas",
+      categoryId: "Saldo Exportación SALE",
+      badge: "OPORTUNIDAD"
     }
   ];
 
@@ -81,13 +84,15 @@ function App() {
   const [guestEmail, setGuestEmail] = useState('');
   const [selectedCategory, setSelectedCategory] = useState<string>('Todos');
 
-  const categories = ['Todos', 'Varietales', 'Reservas', 'Gran Reserva', 'Premium', 'Saldo Exportación'];
+  const categories = ['Todos', 'Varietales SALE', 'Reservas', 'Gran Reservas', 'Premium', 'Saldo Exportación SALE'];
 
   const filteredProducts = selectedCategory === 'Todos' 
     ? products 
     : products.filter(p => {
-        if (selectedCategory === 'Varietales') return p.category === 'Varietal';
+        if (selectedCategory === 'Varietales SALE') return p.category === 'Varietal';
         if (selectedCategory === 'Reservas') return p.category === 'Reserva';
+        if (selectedCategory === 'Gran Reservas') return p.category === 'Gran Reserva';
+        if (selectedCategory === 'Saldo Exportación SALE') return p.category === 'Saldo Exportación';
         return p.category === selectedCategory;
       });
 
@@ -184,7 +189,7 @@ function App() {
       {/* Header */}
       <header className="header glass">
         <div className="container header-content">
-          <div className="logo">
+          <div className="logo" translate="no">
             <Wine color="var(--primary-color)" size={32} />
             <span>Bodega</span> Premium
           </div>
@@ -215,16 +220,16 @@ function App() {
             style={{ backgroundImage: `linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url(${slide.image})` }}
           >
             <div className="container slide-content">
-              {slide.badge && <span className="slide-badge animate-fade-in">{slide.badge}</span>}
-              <h2 className="slide-subtitle animate-fade-in">{slide.subtitle}</h2>
-              <h1 className="animate-fade-in">
+              {slide.badge && <span className={`slide-badge animate-fade-in ${(slide as any).hideBadgeMobile ? 'hide-mobile' : ''}`}>{slide.badge}</span>}
+              <h2 className={`slide-subtitle animate-fade-in ${slide.hideTitleMobile ? 'hide-mobile' : ''}`} translate="no">{slide.subtitle}</h2>
+              <h1 className={`animate-fade-in ${slide.hideTitleMobile ? 'hide-mobile' : ''}`} translate="no">
                 {slide.title}
               </h1>
               <p className="animate-fade-in hide-mobile">
                 {slide.desc}
               </p>
               {slide.mobileDesc && (
-                <p className="animate-fade-in show-mobile mobile-promo-text">
+                <p className="animate-fade-in show-mobile mobile-promo-text" translate="no">
                   {slide.mobileDesc}
                 </p>
               )}
@@ -258,18 +263,16 @@ function App() {
       </section>
 
       {/* Category Navigation */}
-      <nav className="category-nav">
+      <nav className="category-nav" translate="no">
         <div className="container category-tabs">
           {categories.map(cat => (
             <button 
               key={cat}
               className={`category-tab ${selectedCategory === cat ? 'active' : ''}`}
               onClick={() => setSelectedCategory(cat)}
+              translate="no"
             >
               {cat}
-              {(cat === 'Varietales' || cat === 'Saldo Exportación') && (
-                <span style={{ marginLeft: '0.5rem', fontSize: '0.65rem', background: 'white', color: 'var(--primary-color)', padding: '0.1rem 0.4rem', borderRadius: '4px', fontWeight: 900 }}>SALE</span>
-              )}
             </button>
           ))}
         </div>
@@ -277,7 +280,7 @@ function App() {
 
       {/* Product List */}
       <main id="catalog" className="products-section container">
-        <h2 className="section-title">
+        <h2 className="section-title" translate="no">
           {selectedCategory === 'Todos' ? 'Nuestra Selección' : selectedCategory}
         </h2>
         <div className="grid">
@@ -298,8 +301,8 @@ function App() {
                 <img src={product.imageUrl} alt={product.name} className="product-image" loading="lazy" />
               </div>
               <div className="product-info">
-                <span className="product-category">{product.category}</span>
-                <h3 className="product-title">{product.name}</h3>
+                <span className="product-category" translate="no">{product.category}</span>
+                <h3 className="product-title" translate="no">{product.name}</h3>
                 <p className="product-desc">{product.description}</p>
                 <div className="product-footer">
                   <div style={{ display: 'flex', flexDirection: 'column' }}>

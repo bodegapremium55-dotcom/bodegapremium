@@ -512,7 +512,7 @@ export const products: Product[] = [
     winery: "Bodega Premium",
     origin_region: "Maule",
     format: "Caja de 6 botellas",
-    badge: "OFERTA",
+    badge: "OFERTA CAJA 6",
     originalPrice: 29900,
     formattedOriginalPrice: "$29.900"
   },
@@ -584,7 +584,7 @@ export const products: Product[] = [
     winery: "Bodega Premium",
     origin_region: "Maule",
     format: "Caja de 6 botellas",
-    badge: "OFERTA",
+    badge: "OFERTA EXPORTACIÓN",
     originalPrice: 42000,
     formattedOriginalPrice: "$42.000"
   },
