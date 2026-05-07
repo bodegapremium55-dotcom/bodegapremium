@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { ShoppingCart, X, Plus, Minus, Wine, ChevronRight, ChevronLeft, CheckCircle2, LogOut, BookOpen, Star } from 'lucide-react';
+import { ShoppingCart, X, Plus, Minus, Wine, ChevronRight, ChevronLeft, CheckCircle2, LogOut, BookOpen } from 'lucide-react';
 import { products, type Product } from './data/products';
 import { blogPosts, type BlogPost } from './data/blog';
 import { initMercadoPago, Wallet } from '@mercadopago/sdk-react';
